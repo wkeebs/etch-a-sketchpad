@@ -1,0 +1,37 @@
+:root {
+    --bone: #e3dac9; 
+    --dark-bone: #a6977c;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    
+}
+
+.holder {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bone);
+}
+
+#grid-container {
+    height: fit-content;
+    width: 60vw;
+    background-color: var(--dark-bone);
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    margin: 25px;
+}
+
+.grid-div {
+    background-color: whitesmoke;
+    margin: 2px;
+    aspect-ratio: 1;
+}
