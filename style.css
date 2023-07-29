@@ -3,8 +3,9 @@
 }
 
 :root {
-    --bone: #e3dac9; 
-    --dark-bone: #a6977c;
+    --background-colour: #e3dac9;
+    --background-light: whitesmoke;
+    --dark: #a0937b;
 }
 
 body {
@@ -20,26 +21,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bone);
+    background-color: var(--background-colour);
 }
 
 #grid-container {
-    width: clamp(300px, 50%, 800px);
+    width: 500px;
+    height: 500px;
     aspect-ratio: 1;
-    background-color: var(--dark-bone);
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    background-color: var(--background-light);
+    display: grid;
+    grid-auto-rows: 1fr;
     gap: 0px 0px; 
     margin: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .grid-div {
     background-color: white;
     aspect-ratio: 1;
-    transition: 200ms ease-in-out;
 }
-
 
 .slidecontainer {
     display: flex;
@@ -78,7 +78,7 @@ body {
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: var(--dark-bone); /* Green background */
+  background: var(--dark); /* Green background */
   cursor: pointer; /* Cursor on hover */
   border-radius: 50%;
 }
@@ -86,6 +86,6 @@ body {
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: var(--dark-bone); /* Green background */
+  background: var(--dark); /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
