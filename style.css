@@ -1,3 +1,7 @@
+* {
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+
 :root {
     --bone: #e3dac9; 
     --dark-bone: #a6977c;
@@ -20,8 +24,8 @@ body {
 }
 
 #grid-container {
-    height: fit-content;
-    width: 60vw;
+    width: clamp(300px, 50%, 800px);
+    aspect-ratio: 1;
     background-color: var(--dark-bone);
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr; 
@@ -31,7 +35,57 @@ body {
 }
 
 .grid-div {
-    background-color: whitesmoke;
-    margin: 2px;
+    background-color: white;
     aspect-ratio: 1;
+    transition: 200ms ease-in-out;
+}
+
+
+.slidecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#slider-value {
+    font-size: 1.5rem;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 15px; /* Specified height */
+  background: whitesmoke; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 5px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--dark-bone); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--dark-bone); /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }

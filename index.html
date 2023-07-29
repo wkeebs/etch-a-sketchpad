@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketchpad</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="holder">
+        <div class="slidecontainer">
+            <input type="range" min="4" max="32" value="4" class="slider" id="myRange">
+            <div id="slider-value"></div>
+          </div>
         <div id="grid-container"></div>
     </div>
 </body>
