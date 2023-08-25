@@ -43,6 +43,33 @@ a {
   background-color: var(--background-colour);
 }
 
+.control-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 5rem;
+}
+
+.colour-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#colour-text {
+  font-size: 2rem;
+}
+
+#colour-picker {
+  width: 75px;
+  height: 75px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 #grid-container {
   width: 500px;
   height: 500px;
@@ -80,7 +107,12 @@ a {
   padding-bottom: 2rem;
 }
 
-.footer {
+.clear-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 10px;
 }
 
 /* The slider itself */

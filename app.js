@@ -10,6 +10,8 @@ let currentColour = DEFAULT_COLOUR;
 const container = document.querySelector("#grid-container");
 const slider = document.querySelector(".slider");
 const sliderDisplay = document.querySelector("#slider-value");
+const colourPicker = document.querySelector("#colour-picker");
+const clearBtn = document.querySelector(".clear-btn");
 
 // Functions
 function updateSliderValue(value) {
@@ -26,7 +28,7 @@ function initialiseGrid(size) {
     const newDiv = document.createElement("div");
 
     newDiv.addEventListener("mouseover", () => {
-      newDiv.style.backgroundColor = "black";
+      newDiv.style.backgroundColor = currentColour;
     });
 
     newDiv.classList.add("grid-div");
@@ -37,16 +39,29 @@ function initialiseGrid(size) {
 function initialisePage() {
   initialiseGrid(DEFAULT_SIZE);
   updateSliderValue(DEFAULT_SIZE);
+
   slider.oninput = () => {
     currentSize = slider.value;
     updateSliderValue(currentSize);
     changeSize();
   };
+
+  colourPicker.addEventListener("input", changeColour);
+
+  clearBtn.addEventListener("click", () => {
+    container.innerHTML = "";
+    initialiseGrid(currentSize);
+  });
 }
 
 function changeSize() {
   container.innerHTML = "";
   initialiseGrid(currentSize);
+}
+
+function changeColour() {
+  const selectedColour = colourPicker.value;
+  currentColour = selectedColour;
 }
 
 // Initialise Page

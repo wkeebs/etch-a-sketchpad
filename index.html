@@ -10,20 +10,27 @@
   </head>
   <body>
     <header id="title">Etch-a-sketchpad</header>
-    <div class="holder">
-      <div class="slidecontainer">
-        <input
-          type="range"
-          min="4"
-          max="32"
-          value="4"
-          class="slider"
-          id="myRange"
-        />
-        <div id="slider-value"></div>
+      <div class="holder">
+        <div class="control-holder">
+          <div class="colour-holder">
+            <span id="colour-text">Colour</span>
+            <input type="color" id="colour-picker">
+          </div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="4"
+              max="32"
+              value="4"
+              class="slider"
+              id="myRange"
+            />
+            <div id="slider-value"></div>
+          </div>
+          <button class="clear-btn">Clear</button>
+        </div>
+        <div id="grid-container"></div>
       </div>
-      <div id="grid-container"></div>
-    </div>
     <footer>
       Made by <a target="_blank" href="https://github.com/wkeebs/etch-a-sketchpad"><i class="fa-brands fa-github"></i> Will Keeble</a></a>
   </footer>
