@@ -1,69 +1,99 @@
 * {
-    font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
 }
 
 :root {
-    --background-colour: #e3dac9;
-    --background-light: whitesmoke;
-    --dark: #a0937b;
+  --background-colour: #e3dac9;
+  --background-light: whitesmoke;
+  --dark: #a0937b;
 }
 
 body {
-    background-color: black;
-    margin: 0;
-    
+  margin: 0;
+  background-color: var(--background-colour);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+footer {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: royalblue;
 }
 
 .holder {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background-colour);
+  margin: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-colour);
 }
 
 #grid-container {
-    width: 500px;
-    height: 500px;
-    aspect-ratio: 1;
-    background-color: var(--background-light);
-    display: grid;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px; 
-    margin: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 500px;
+  height: 500px;
+  aspect-ratio: 1;
+  background-color: var(--background-light);
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  margin: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .grid-div {
-    background-color: white;
-    aspect-ratio: 1;
+  background-color: white;
+  aspect-ratio: 1;
 }
 
 .slidecontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 #slider-value {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#title {
+  font-size: 6rem;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer {
 }
 
 /* The slider itself */
 .slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
   width: 100%; /* Full-width */
   height: 15px; /* Specified height */
   background: whitesmoke; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
   border-radius: 5px;
 }
 
