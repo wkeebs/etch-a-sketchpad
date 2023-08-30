@@ -6,6 +6,7 @@
   --background-colour: #e3dac9;
   --background-light: whitesmoke;
   --dark: #a0937b;
+  position: fixed;
 }
 
 body {
